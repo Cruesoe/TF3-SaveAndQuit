@@ -4,7 +4,6 @@ local engine_react_util = ug_require "::/gui/main/engine_react_util.tl" as Engin
 local lang_util = ug_require "::/scripts/lang_util.tl" as LangUtil
 local main_mod_button_area = ug_require "::/gui/main/main_mod_button_area.tl" as MainModButtonArea
 local react = ug_require "::/gui/main/react.lua" as React
-local styleutil = ug_require "::/gui/main/styleutil.tl" as StyleUtil
 
 -- Save name used when the game has never been saved
 local FALLBACK_NAME = "save_and_quit"
@@ -31,7 +30,7 @@ local function windowApi() : Builtin.WindowAPI
 	return globals.getDefaultWindowApi()
 end
 
--- Mod button bar button, sized and styled like the layer button; stays pressed while the confirmation is open
+-- Mod button bar button, styled like the layer button (size in save_and_quit.css.lua); stays pressed while the confirmation is open
 local SaveAndQuitButton = react.RegisterPluginRecipe(main_mod_button_area.MainModButtonAreaExtension, "CruesoeSaveAndQuitButton", function() : TreeNodeId
 	local pressedState = react.useState(false) as ReactStateT<boolean>
 	local quittingState = react.useState(false) as ReactStateT<boolean>
@@ -78,9 +77,9 @@ local SaveAndQuitButton = react.RegisterPluginRecipe(main_mod_button_area.MainMo
 		children = {
 			builtin.ToggleButton{
 				meta = {
+					id = "cruesoe-save-and-quit.button",
 					tooltip = _("cruesoe_save_and_quit_tooltip"),
 					enabled = not quittingState:old() and not savingState:old(),
-					styleSheet = styleutil.makeStyle{ size = { 32, 32 }, padding = { 4, 4, 4, 4 }, margin = { 1, 1, 1, 1 } },
 				},
 				content = builtin.ImageView{
 					path = "::/gui/main/icons/symbol_save_floppy_42.tga",
