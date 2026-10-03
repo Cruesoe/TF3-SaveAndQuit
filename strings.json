@@ -1,5 +1,8 @@
 {
     "en": {
-        "cruesoe_save_and_quit_tooltip": "Save and Quit to Desktop"
+        "cruesoe_save_and_quit_tooltip": "Save and Quit to Desktop",
+        "cruesoe_save_and_quit_title": "Save and Quit",
+        "cruesoe_save_and_quit_confirm": "Save as \"{savegameName}\" and quit to the desktop?",
+        "cruesoe_save_and_quit_cancel": "Cancel"
     }
 }
