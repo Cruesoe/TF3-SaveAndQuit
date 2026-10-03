@@ -1,0 +1,15 @@
+{
+    "authors": [
+        {
+            "name": "Cruesoe",
+            "role": "CREATOR"
+        }
+    ],
+    "description": "Adds a button that saves the game and quits to the desktop once the save is done.",
+    "name": "Save and Quit",
+    "summary": "Adds a button that saves the game and quits to the desktop once the save is done.",
+    "tags": [
+        "Script Mod"
+    ],
+    "url": "https://github.com/Cruesoe/TF3-SaveAndQuit"
+}

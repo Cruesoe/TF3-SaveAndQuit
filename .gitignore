@@ -1,0 +1,10 @@
+# Local tooling (machine-specific paths)
+tlconfig.lua
+.vscode/
+
+# Agent instructions stay local
+AGENTS.md
+CLAUDE.md
+
+# Game-generated caches
+texture_metadata_cache.lua
